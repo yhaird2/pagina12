@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: black;
+
+        }
+
+        .section-padding {
+            padding: 70px 0;
+        }
+
+        .carousel-item {
+            height: 90vh;
+            min-height: 300px;
+        }
+
+        .carousel-caption {
+            bottom: 200px;
+            z-index: 2;
+        }
+
+        .carousel-caption h5 {
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 25px;
+        }
+
+        .carousel-caption p {
+            width: 60%;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        .carousel-inner::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba (0, 30, 82, 0.327);
+            z-index: 1;
+        }
+
+        .navbar-nav a {
+            < !--Esto es para el cabezal-->font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .navbar-dark .navbar-brand {
+            color: aliceblue;
+            font-size: 25px;
+            text-transform: upperase;
+            < !--Para las mayusculas del cabezal-->font-weight: bold;
+            letter-spacing: 2px;
+
+        }
+
+        .navbar-light .navbar-brand:focus,
+        .navbar-light .navbar-brand:hover {
+            color: black;
+        }
+
+        .w-100 {
+            height: 100vh;
+
+        }
+
+        .navbar-toggler {
+            padding: 1px 5px;
+            font-size: 18px;
+            line-height: 0.3;
+        }
+
+        .services .card-body i {
+            font-size: 50px;
+
+        }
+
+        .team .card-body i {
+            font-size: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            /* abanico de botones */
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Ocultar el menú desplegable por defecto */
+        nav ul li ul.dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(5, 6, 34);
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li ul.dropdown li {
+            display: block;
+            text-align: left;
+        }
+
+        nav ul li ul.dropdown li a {
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Mostrar el menú desplegable al pasar el mouse */
+        nav ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        nav ul li ul.dropdown li a:hover {
+            background-color: #555;
+        }
+
+        @media(max-width: 767px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .carousel-item {
+                height: 70vh;
+
+            }
+
+            .carousel-caption {
+                bottom: 125px;
+            }
+
+            .carousel-caption h5 {
+                font-size: 17px;
+
+            }
+
+            .carousel-caption a {
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+
+            .carousel-caption p {
+                width: 100%;
+                line-height: 1.5;
+                font-size: 12px;
+
+            }
+
+            .about-text {
+                padding-top: 50px;
+            }
+
+            .card {
+                margin-bottom: 30px;
+            }
+
+            .section-padding {
+                padding: 50px 0;
+            }
+
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <div class="Logo">
+                <img src="escudo.png" height="110%" width="38%">
+
+            </div>
+            <a href="#" class="navbar-brand"> <span class="text-primary">Tecnico Humanistico</span> Vicente Donoso
+                Torrez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+                aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarS">
+                <ul class="navbar-nav ms-auto mb-2 mb-1g-0">
+                    <li class="navbar-item">
+                        <a href="Prueba de cabezal.html" class="nav-link">Inicio</a>
+
+                    </li>
+                    <li class="navbar-item">
+                        <a href="nuevo1.html" class="nav-link">Colegio</a>
+                        <ul class="dropdown">
+                            <li><a href="#"> Paltaforma educativa</a></li>
+                            <li><a href="#"> Biblioteca</a></li>
+                            <li><a href="#"> Seguimiento estudiantil</a></li>
+                            <li><a href="#"> Mobiliario</a></li>
+                            <li><a href="#"> YouTube</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Autoridades</a>
+
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">Noticias</a>
+
+                    </li>
+                    <li class="navbar-item">
+                        <a href="contacto.html" class="nav-link">Contacto</a>
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+    <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
+        <!-- Parte de abajo del desplazamiento <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="slide 1">
+
+            </button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-current="true"
+                aria-label="slide 2">
+
+            </button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-current="true"
+                aria-label="slide 3">
+
+            </button>
+
+        </div>-->
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="noticia..jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h1>Noticias y eventos importantes</h1>
+                    <p>
+                        Mantente al tanto de las últimas novedades y eventos de nuestro colegio. Aquí encontrarás
+                        actualizaciones sobre actividades académicas, logros estudiantiles, eventos especiales y otras
+                        noticias relevantes que reflejan la vida vibrante de nuestra comunidad educativa. No te pierdas
+                        ninguna de nuestras noticias y celebra con nosotros los éxitos y avances de nuestros estudiantes
+                        y el personal.
+                    </p>
+                    <!--<a href="#" class="btn btn-primary mt-3">Mas informacion </a> -->
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        <!-- Parte del desplazamiento <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+            <span class="visually-hidden"> Next </span>
+        </button>-->
+
+    </div>
+
+
+    <section class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--<div class="section-header text-center text-black pb-5">
+                        <h2> Nuestros Servicios </h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.
+                        </p>
+
+                    </div>-->
+
+                </div>
+
+            </div>
+            <!--<div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-laptop"> </i>
+                            <h3 class="card-title">Contacto</h3>
+                            <p class="lead">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                            <button class="btn bg-primary text-white"> Mas informacion</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-people"> </i>
+                            <h3 class="card-title">Profesores</h3>
+                            <p class="lead">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                            <button class="btn bg-primary text-white"> Mas informacion</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-calendar"> </i>
+                            <h3 class="card-title">Calendario Academico</h3>
+                            <p class="lead">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                            <button class="btn bg-primary text-white"> Mas informacion</button>
+
+                        </div>
+
+                    </div>
+
+                </div>-->
+
+        </div>
+
+        </div>
+
+
+
+    </section>
+
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about--img">
+                        <img src="9.png" class="img-fluid" alt="">
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text text-black">
+                        <h2>Un Espacio de Aprendizaje 2.0: La Transformación de la Sala Audiovisual en la Unidad
+                            Educativa <br> Servicios</h2>
+                        <p>
+                            La construcción de una sala audiovisual en una unidad educativa representa un avance
+                            significativo hacia la modernización del proceso de enseñanza-aprendizaje. Este nuevo
+                            espacio está diseñado para integrar tecnología de vanguardia, facilitando el acceso a
+                            recursos multimedia y fomentando la creatividad y participación activa de los estudiantes.
+                            Con capacidad para proyecciones, talleres y actividades interactivas, la sala se convierte
+                            en un punto focal para el desarrollo de competencias digitales y comunicativas, preparando a
+                            los alumnos para enfrentar los desafíos del mundo contemporáneo. Además, la sala promoverá
+                            la colaboración entre docentes y estudiantes, enriqueciendo la experiencia educativa y
+                            transformando la forma en que se imparte el conocimiento.
+                        </p>
+                        <a href="#" class="btn btn-primary"> Mas informacion </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about--img">
+                        <img src="8.png" class="img-fluid" alt="">
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text text-black">
+                        <h2>Convocatorias y Actividades Especiales en Celebración del 57º Aniversario de la Unidad
+                            Educativa Vicente Donoso Torrez <br> Servicios</h2>
+                        <p>
+                            En el marco de las celebraciones por las Bodas de Diamante de nuestra querida Unidad
+                            Educativa Vicente Donoso Torrez, hemos preparado una serie de actividades y convocatorias
+                            abiertas para toda la comunidad educativa, desde nivel inicial hasta secundario. Este año,
+                            nuestras iniciativas no solo buscan resaltar el legado de 57 años de educación, sino también
+                            fortalecer los lazos entre estudiantes, docentes, padres de familia y el personal
+                            administrativo.Estas convocatorias buscan la participación activa de toda nuestra comunidad
+                            escolar, reforzando el espíritu de unidad y compromiso que caracteriza a nuestra institución
+                            en sus 57 años de trayectoria. ¡Esperamos contar con la participación de todos!
+                        </p>
+                        <a href="#" class="btn btn-primary"> Mas informacion </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about--img">
+                        <img src="7.png" class="img-fluid" alt="">
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text text-black">
+                        <h2>Pasarelas Ecológicas: Creatividad y Sostenibilidad en Acción<br> Servicios</h2>
+                        <p>
+                            En una brillante muestra de creatividad y conciencia ambiental, los estudiantes de la unidad
+                            educativa llevaron a cabo un emocionante desfile de moda en el que lucieron piezas únicas
+                            confeccionadas con materiales reciclados. La actividad no solo propició la expresión
+                            artística de los alumnos, sino que también fomentó el aprendizaje sobre la sostenibilidad y
+                            el impacto del reciclaje en el medio ambiente. Cada diseño reflejó la innovación y el
+                            ingenio de los participantes, quienes transformaron objetos cotidianos en auténticas obras
+                            de arte. Este evento unió a la comunidad educativa en una celebración del talento juvenil y
+                            la importancia de cuidar nuestro planeta, demostrando que la moda puede ser un vehículo para
+                            el cambio positivo.
+                        </p>
+                        <a href="#" class="btn btn-primary"> Mas informacion </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about--img">
+                        <img src="10.png" class="img-fluid" alt="">
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text text-black">
+                        <h2>Día del adulto mayor<br></h2>
+                        <p>
+                            El lunes, el Colegio "Vicente Donoso Torrez" conmemoró el Día del Adulto Mayor con
+                            una emotiva Hora Cívica. Estudiantes de primaria y secundaria se unieron para homenajear a
+                            los adultos mayores, destacando su importancia en la sociedad.
+
+                            Durante el acto, los alumnos recitaron conmovedores poemas, expresando gratitud y respeto.
+                            Este evento subrayó el compromiso de la comunidad educativa con el buen trato y el aprecio
+                            por las generaciones mayores, en un ambiente lleno de emoción y valores.
+                        </p>
+                        <a href="#" class="btn btn-primary"> Mas informacion </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    -
+    <section class="about section-padding"></section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="about--img">
+                    <img src="7.png" class="img-fluid" alt="">
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                <div class="about-text text-black">
+                    <h2>Día del adulto mayor<br></h2>
+                    <p>
+                        En una brillante muestra de creatividad y conciencia ambiental, los estudiantes de la unidad
+                        educativa llevaron a cabo un emocionante desfile de moda en el que lucieron piezas únicas
+                        confeccionadas con materiales reciclados. La actividad no solo propició la expresión
+                        artística de los alumnos, sino que también fomentó el aprendizaje sobre la sostenibilidad y
+                        el impacto del reciclaje en el medio ambiente. Cada diseño reflejó la innovación y el
+                        ingenio de los participantes, quienes transformaron objetos cotidianos en auténticas obras
+                        de arte. Este evento unió a la comunidad educativa en una celebración del talento juvenil y
+                        la importancia de cuidar nuestro planeta, demostrando que la moda puede ser un vehículo para
+                        el cambio positivo.
+                    </p>
+                    <a href="#" class="btn btn-primary"> Mas informacion </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
+    -
+    <section class="about section-padding"></section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="about--img">
+                    <img src="7.png" class="img-fluid" alt="">
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                <div class="about-text text-black">
+                    <h2>Día del adulto mayor<br></h2>
+                    <p>
+                        En una brillante muestra de creatividad y conciencia ambiental, los estudiantes de la unidad
+                        educativa llevaron a cabo un emocionante desfile de moda en el que lucieron piezas únicas
+                        confeccionadas con materiales reciclados. La actividad no solo propició la expresión
+                        artística de los alumnos, sino que también fomentó el aprendizaje sobre la sostenibilidad y
+                        el impacto del reciclaje en el medio ambiente. Cada diseño reflejó la innovación y el
+                        ingenio de los participantes, quienes transformaron objetos cotidianos en auténticas obras
+                        de arte. Este evento unió a la comunidad educativa en una celebración del talento juvenil y
+                        la importancia de cuidar nuestro planeta, demostrando que la moda puede ser un vehículo para
+                        el cambio positivo.
+                    </p>
+                    <a href="#" class="btn btn-primary"> Mas informacion </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white"> Vicente Donoso Torrez</p>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
